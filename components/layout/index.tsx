@@ -1,8 +1,8 @@
-import {FC} from "react";
+import React, {FC} from "react";
 import {Footer, Header} from "@common/organisms";
 
 interface MainLayoutProps {
-
+  children: React.ReactNode
 }
 
 const MainLayout: FC<MainLayoutProps> = ({children}) => {
