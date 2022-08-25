@@ -1,9 +1,11 @@
 import {FC} from "react";
+import MainLayout from "@layout";
 
 const Home: FC = () => {
   return (
-    <div>
-    </div>
+    <MainLayout>
+      some ELse
+    </MainLayout>
   )
 }
 
