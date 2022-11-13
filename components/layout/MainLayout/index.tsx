@@ -1,18 +1,28 @@
 import React, {FC} from "react";
 import {Footer, Header} from "@common/organisms";
+import {FooterStyle} from "@common/organisms";
+import {useTheme} from "styled-components";
+import {Theme} from "@themes";
 
-interface MainLayoutProps {
-  children: React.ReactNode
+export interface MainLayoutStyles {
+    footerStyle: FooterStyle;
 }
 
+type  MainLayoutProps = { children: React.ReactNode };
+
+
 const MainLayout: FC<MainLayoutProps> = ({children}) => {
-  return (
-    <>
-      <Header></Header>
-      <main>{children}</main>
-      <Footer></Footer>
-    </>
-  )
+    const theme = useTheme() as Theme;
+
+    const {footerStyle} = theme.mainLayout;
+
+    return (
+        <>
+            <Header/>
+            <main>{children}</main>
+            <Footer{...footerStyle}/>
+        </>
+    )
 }
 
 export default MainLayout;

@@ -1,12 +1,11 @@
 import {FC} from "react";
-import MainLayout from "@layout";
 
-const Home: FC = () => {
-  return (
-    <MainLayout>
-      some ELse
-    </MainLayout>
-  )
+const Home: FC = ({}) => {
+    return (
+        <span>
+            Some main
+        </span>
+    )
 }
 
 export default Home
