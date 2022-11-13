@@ -19,7 +19,7 @@ const MainLayout: FC<MainLayoutProps> = ({children}) => {
     return (
         <>
             <Header/>
-            <main>{children}</main>
+            {children}
             <Footer{...footerStyle}/>
         </>
     )
