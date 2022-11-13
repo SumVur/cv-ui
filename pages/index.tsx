@@ -1,10 +1,11 @@
 import {FC} from "react";
+import {PagesPreview} from "@common/organisms";
 
-const Home: FC = ({}) => {
+const Home: FC = () => {
     return (
-        <span>
-            Some main
-        </span>
+        <main>
+            <PagesPreview/>
+        </main>
     )
 }
 
