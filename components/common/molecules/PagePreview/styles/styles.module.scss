@@ -1,0 +1,25 @@
+$margin: 8px;
+.wrapper {
+  backdrop-filter: blur(1px);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: small;
+  display: inline-block;
+  text-align: center;
+  width: calc((100% / 3));
+  aspect-ratio: 0.5;
+  margin: $margin;
+  border-radius: 16px;
+  overflow: hidden;
+
+  &:hover {
+    backdrop-filter: none;
+  }
+
+  h2 {
+    z-index: 2;
+    font-size: 30px;
+    color: #476279;
+  }
+}
