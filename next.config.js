@@ -6,6 +6,9 @@ const nextConfig = {
   i18n,
   reactStrictMode: true,
   swcMinify: true,
+  compiler: {
+    styledComponents: true
+  }
 }
 
 module.exports = nextConfig
