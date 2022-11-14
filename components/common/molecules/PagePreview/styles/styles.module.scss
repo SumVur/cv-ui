@@ -1,17 +1,19 @@
-$margin: 8px;
 .wrapper {
   backdrop-filter: blur(1px);
   align-items: center;
   justify-content: center;
   position: relative;
-  font-size: small;
   display: inline-block;
-  text-align: center;
   width: calc((100% / 3));
-  aspect-ratio: 0.5;
-  margin: $margin;
+  aspect-ratio: 0.8;
+  margin: 8px;
   border-radius: 16px;
   overflow: hidden;
+
+
+  @media (max-width: 800px) {
+    width: 94%;
+  }
 
   &:hover {
     backdrop-filter: none;

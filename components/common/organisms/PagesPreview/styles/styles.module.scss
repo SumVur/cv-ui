@@ -1,5 +1,11 @@
-.PagesPreview{
+.PagesPreview {
   justify-content: space-around;
+  align-items: center;
   width: 96vw;
   padding-top: 8px;
+  @media (max-width: 700px) {
+    flex-direction: column;
+    width: 100%;
+  }
+
 }

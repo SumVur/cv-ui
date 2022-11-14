@@ -6,10 +6,10 @@ const ProfileMainInfo = ({}) => {
     return (
         <FlexDiv className={style.profileInfo}>
             <ProfileImage/>
-            <div className={style.about}>
+            <FlexDiv className={style.about}>
                 <h1>Oleksii Mukharoskyi</h1>
                 <h2>Magento 2 Full Stack Developer</h2>
-            </div>
+            </FlexDiv>
         </FlexDiv>
     )
 }
