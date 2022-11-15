@@ -1,48 +1,37 @@
 import React, {FC} from "react";
-import {SocialLink} from "@data/social-links";
+import {actionOnSocialLink, SocialLink} from "@data/social-links";
 import * as icons from "@media/generated/SocialIcons";
 import style from "./styles/styles.module.scss";
+import {IconInterface, IconStyleInterface} from "@media/generated/abstractIcon";
 
-export interface SocialIconStyle {
-    color: string[];
+export interface SocialIconStyle extends IconStyleInterface {
     hoverColor: string;
-    size: number;
-    id?: string;
     socialIconClassName?: string;
 }
 
-type SocialIconProps = SocialLink & SocialIconStyle;
+type SocialIconProps = SocialLink & SocialIconStyle & IconInterface;
 
-const SocialIcon: FC<SocialIconProps> = ({
-     name,
-     link,
-     size,
-     color,
-     hoverColor,
-     id,
-     socialIconClassName,
- }) => {
-    const Icon = icons[name];
+const SocialIcon: FC<SocialIconProps> = props => {
+
+    const Icon = icons[props.name];
 
     if (!Icon) {
         return null;
     }
 
-    return size ? (
+    const {socialIconClassName, hoverColor, id, action, link, ...iconProps} = props
+
+    return (
         <div
             className={`${style.icon} ${socialIconClassName}`}
             style={{width: "fit-content"}}
-            onClick={
-                () => {
-                    window.open(link)?.focus();
-                }
-            }
+            onClick={() => {
+                actionOnSocialLink(action, link)
+            }}
         >
             <Icon
                 id={id}
-                fill={color}
-                height={size}
-                width={size}
+                {...iconProps}
                 more={
                     <style>
                         {`
@@ -58,8 +47,7 @@ const SocialIcon: FC<SocialIconProps> = ({
                     </style>
                 }
             />
-        </div>
-    ) : null;
+        </div>)
 };
 
 export default SocialIcon;

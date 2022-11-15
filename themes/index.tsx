@@ -1,17 +1,16 @@
 import {MainLayoutStyles} from "@components/layout/MainLayout";
-import { DefaultTheme } from 'styled-components'
-
 
 export interface Theme {
     mainLayout: MainLayoutStyles
 }
-
+const iconSize = 32;
 export const theme: Theme = {
     mainLayout: {
-        footerStyle: {
+        headerStyle: {
             socialIconStyle: {
-                size: 32,
-                color: ["#C3D0D5"],
+                width:iconSize,
+                height:iconSize,
+                fill: ["#C3D0D5"],
                 hoverColor: "#F5BE17",
             }
         }

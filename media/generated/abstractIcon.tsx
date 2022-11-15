@@ -1,15 +1,22 @@
 import React, {FC} from "react";
 
-interface AbstractIconInterface {
+export interface AbstractIconStyleInterface {
     height: number,
     width: number,
-    more: any,
-    id: string,
 }
 
-export type IconInterface = AbstractIconInterface & { fill: string }
+export interface AbstractIconInterface {
+    id: string,
+    more?: any
+}
 
-type AbstractIconProps = AbstractIconInterface & { children: React.ReactNode }
+export interface IconStyleInterface extends AbstractIconStyleInterface {
+    fill: string[]
+}
+
+export type IconInterface = IconStyleInterface & AbstractIconInterface;
+
+type AbstractIconProps = AbstractIconInterface & AbstractIconStyleInterface & { children: React.ReactNode }
 
 export const AbstractIcon: FC<AbstractIconProps> = ({id, width, height, more, children}) => {
     return (
