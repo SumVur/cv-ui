@@ -13,7 +13,7 @@ export const theme: Theme = {
             socialIconStyle: {
                 width: iconSize,
                 height: iconSize,
-                fill: ["#C3D0D5"],
+                fill: ["#FBE1B0"],
                 hoverColor: "#F5BE17",
             }
         }
@@ -23,7 +23,7 @@ export const theme: Theme = {
             width: 80,
             height: 80,
             fill: [
-                "#87aebe", "#7a9394", "#839da1",
+                "#c5ced7", "#9ab5b6", "#839da1",
                 "#748383", "#83989d", "#556569",
                 "#4e5b62",
             ],
