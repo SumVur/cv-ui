@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const ProfileImage = ({}) => {
+const ProfileImage = () => {
     return (
         <Image
             src="/profile-image.png"
