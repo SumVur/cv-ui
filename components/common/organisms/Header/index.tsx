@@ -1,9 +1,11 @@
 import {FC} from "react";
-import {HeaderWrapper} from "@common/organisms/Header/styles";
-import {ProfileMainInfo} from "@common/molecules";
+import {NavigationBar, ProfileMainInfo, SocialLinks} from "@common/molecules";
+import {FlexDiv} from "@components/common/styles";
+import style from "./styles/styles.module.scss"
+import {SocialIconStyle} from "@common/atoms";
 
 export interface HeaderStyle {
-
+    socialIconStyle: SocialIconStyle
 }
 
 export interface HeaderInterface {
@@ -11,11 +13,16 @@ export interface HeaderInterface {
 }
 
 type HeaderProps = HeaderInterface & HeaderStyle
-const Header: FC<HeaderProps> = ({}) => {
+const Header: FC<HeaderProps> = ({socialIconStyle}) => {
     return (
-        <HeaderWrapper>
+        <FlexDiv className={style.wrapper}>
+            <SocialLinks
+                paraphrase={"Footer"}
+                socialIconStyle={socialIconStyle}
+            />
             <ProfileMainInfo/>
-        </HeaderWrapper>
+            <NavigationBar/>
+        </FlexDiv>
     )
 }
 
