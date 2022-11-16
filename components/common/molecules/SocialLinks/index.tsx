@@ -15,10 +15,7 @@ const SocialLinks: FC<SocialLinksProps> = ({
                                                paraphrase,
                                                socialIconStyle,
                                            }) => {
-    const {
-        data,
-        error
-    } = useSWR('/api/social-links', (apiURL: string) => fetch(apiURL, {timeout: 8000}).then(res => res.json()))
+    const {data} = useSWR('/api/social-links', (apiURL: string) => fetch(apiURL, {timeout: 8000}).then(res => res.json()))
 
     return (
         <FlexDiv width={`${socialIconStyle.width * 2 + (16 * 2)}px`} className={style.socialLinks}>
