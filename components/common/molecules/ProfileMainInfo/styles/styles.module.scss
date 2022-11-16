@@ -1,12 +1,11 @@
 .profileInfo {
+  width: max-content;
   flex-direction: column;
   align-items: center;
 
   img {
     border: 2px solid white;
   }
-
-  padding: 20px;
 }
 
 .about {
