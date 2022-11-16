@@ -2,10 +2,10 @@ import {FC} from "react";
 import {NavigationBar, ProfileMainInfo, SocialLinks} from "@common/molecules";
 import {FlexDiv} from "@components/common/styles";
 import style from "./styles/styles.module.scss"
-import {SocialIconStyle} from "@common/atoms";
+import {HoverActionIconStyle} from "@common/styles/HoverActionIcon";
 
 export interface HeaderStyle {
-    socialIconStyle: SocialIconStyle
+    socialIconStyle: HoverActionIconStyle
 }
 
 export interface HeaderInterface {
