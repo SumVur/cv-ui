@@ -8,10 +8,10 @@ export type SkillsPageStyles = SkillsStyles;
 const SkillsPage: FC = () => {
     const theme = useTheme() as Theme;
 
-    const {skillIconStyle} = theme.skillsPage;
+    const {skillDivisionStyle} = theme.skillsPage;
     return (
         <main>
-            <Skills skillIconStyle={skillIconStyle}/>
+            <Skills skillDivisionStyle={skillDivisionStyle}/>
         </main>
     )
 }

@@ -19,16 +19,21 @@ export const theme: Theme = {
         }
     },
     skillsPage: {
-        skillIconStyle: {
-            width: 80,
-            height: 80,
-            fill: [
-                "#c5ced7", "#9ab5b6", "#839da1",
-                "#748383", "#83989d", "#556569",
-                "#4e5b62",
-            ],
-            useDefaultColors:true,
-            hoverColor: "#F5BE17",
+        skillDivisionStyle: {
+            skillIconStyle: {
+                width: 80,
+                height: 80,
+                fill: [
+                    "#c5ced7", "#9ab5b6", "#839da1",
+                    "#748383", "#83989d", "#556569",
+                    "#4e5b62",
+                ],
+                useDefaultColors: true,
+                hoverColor: "#F5BE17",
+            },
+            titleStyle: {
+                color: "black"
+            }
         }
     }
 }
