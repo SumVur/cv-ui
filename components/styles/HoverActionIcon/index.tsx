@@ -23,6 +23,9 @@ const HoverActionIcon: FC<HoverActionIconProps> = props => {
 
     const router = useRouter();
 
+    const hoverStyles = !useDefaultColors ? `#${id}:hover path {fill: ${hoverColor};}
+                            #${id}:hover circle {fill: ${hoverColor};}` : ""
+
     return (!Icon) ? null : (
         <div
             className={`${style.icon} ${actionIconClassName}`}
@@ -51,16 +54,7 @@ const HoverActionIcon: FC<HoverActionIconProps> = props => {
                         #${id}:hover{
                         transform: scale(1.2);
                         }
-                        ${
-                            !IsDefaultColors ? `
-                            #${id}:hover path {
-                              fill: ${hoverColor};
-                            }
-                            #${id}:hover circle {
-                              fill: ${hoverColor};
-                            }
-                            ` : ""
-                        }
+                        ${hoverStyles}
                         `}
                     </style>
                 }
