@@ -3,6 +3,7 @@ import style from "./styles/styles.module.scss";
 import * as icons from "@media/generated";
 import {AbstractIconInterface, IconStyleInterface} from "@media/generated/abstractIcon";
 import {ActionIconInterface, actionOnIcon} from "@data/action-icon";
+import {useRouter} from "next/router";
 
 export interface HoverActionIconStyle extends IconStyleInterface {
     hoverColor: string;
@@ -20,16 +21,14 @@ const HoverActionIcon: FC<HoverActionIconProps> = props => {
 
     const Icon = icons[props.title];
 
-    if (!Icon) {
-        return null;
-    }
+    const router = useRouter();
 
-    return (
+    return (!Icon) ? null : (
         <div
             className={`${style.icon} ${actionIconClassName}`}
             style={{width: "fit-content"}}
             onClick={() => {
-                actionOnIcon(action, link)
+                actionOnIcon(action ?? router, link)();
             }}
             onMouseEnter={() => {
                 useDefaultColors && setIsDefaultColors(true)

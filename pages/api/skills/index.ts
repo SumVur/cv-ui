@@ -2,104 +2,25 @@ import type {NextApiRequest, NextApiResponse} from "next";
 import {SkillInterface} from "@data/skill";
 import * as icons from "@media/generated/Skills";
 
-const path = "/skills"
-const skills: SkillInterface[] = [
-    {
-        title: "PHP",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "HTML",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "CSS",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "JavaScript",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "TypeScript",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "SASS",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "NodeJs",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "ReactF",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "Jquery",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "RequireJs",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "Knockout",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "MongoDb",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "Redis",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "Elasticsearch",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "MySql",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "Postgres",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "XDebug",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "Docker",
-        link: `${path}`,
-        action: "location"
-    },
-    {
-        title: "Kubernetes",
-        link: `${path}`,
-        action: "location"
+function createSkill(title: keyof typeof icons): SkillInterface {
+    return {
+        title,
+        link: "/skills",
     }
-];
+}
+
+function createAllSkills(): SkillInterface[] {
+    let skills: SkillInterface[] = [];
+
+    for (let iconsKey in icons) {
+        // @ts-ignore
+        skills.push(createSkill(iconsKey))
+    }
+
+    return skills;
+}
+
+const skills: SkillInterface[] = createAllSkills();
 
 export function getSkills(skillsTitles: (keyof typeof icons)[]): SkillInterface[] {
     let finalSkills: SkillInterface[] = [];

@@ -1,15 +1,22 @@
 import * as icons from "@media/generated";
+import {NextRouter} from "next/router";
 
-type action = "location" | "open";
+export type action = "location" | "open" | NextRouter;
 
-export function actionOnIcon(action: action, link: string) {
+export function actionOnIcon(action: action, link: string): () => any {
     switch (action) {
         case "location":
-            window.location.href = link
-            break;
+            return () => {
+                window.location.href = link
+            }
         case "open":
-            window.open(link)?.focus()
-            break;
+            return () => {
+                window.open(link)?.focus()
+            }
+        default:
+            return () => {
+                action?.push(link)
+            }
     }
 }
 
@@ -18,5 +25,5 @@ export type Modify<T, R> = Omit<T, keyof R> & R;
 export interface ActionIconInterface {
     title: keyof typeof icons;
     link: string;
-    action: action;
+    action?: action;
 }
