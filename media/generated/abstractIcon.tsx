@@ -3,7 +3,7 @@ import React, {FC} from "react";
 export interface AbstractIconStyleInterface {
     height: number,
     width: number,
-    useDefaultColors?:boolean
+    useDefaultColors?: boolean
 }
 
 export interface AbstractIconInterface {
@@ -22,7 +22,16 @@ type AbstractIconProps =
     & AbstractIconStyleInterface
     & { children: React.ReactNode, viewBox?: string } & React.SVGProps<SVGSVGElement>
 
-export const AbstractIcon: FC<AbstractIconProps> = ({id, width, height, viewBox, more, children, ...rest}) => {
+export const AbstractIcon: FC<AbstractIconProps> = ({
+    id,
+    width,
+    height,
+    viewBox,
+    more,
+    children,
+    useDefaultColors = false,
+    ...rest
+}) => {
     viewBox = viewBox ?? '0 0 24 24'
 
     return (
