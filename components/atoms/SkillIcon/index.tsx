@@ -2,7 +2,7 @@ import React, {FC} from "react";
 import ActionIcon, {
     HoverActionIconInterface,
     HoverActionIconStyle
-} from "@common/styles/HoverActionIcon";
+} from "@components/styles/HoverActionIcon";
 import {ActionIconInterface, Modify} from "@data/action-icon";
 import * as icons from "@media/generated/Skills";
 

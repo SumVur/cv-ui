@@ -1,7 +1,7 @@
 import {FC} from "react";
-import Skills, {SkillsStyles} from "@common/organisms/Skills";
 import {useTheme} from "styled-components";
 import {Theme} from "@themes";
+import {Skills, SkillsStyles} from "@organisms";
 
 export type SkillsPageStyles = SkillsStyles;
 

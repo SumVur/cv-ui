@@ -1,6 +1,6 @@
 import React, {FC} from "react";
 import {SocialIconInterface} from "@data/social-links";
-import ActionIcon, {HoverActionIconInterface, HoverActionIconStyle} from "@common/styles/HoverActionIcon";
+import ActionIcon, {HoverActionIconInterface, HoverActionIconStyle} from "@components/styles/HoverActionIcon";
 
 type SocialIconProps = SocialIconInterface & HoverActionIconStyle & HoverActionIconInterface
 

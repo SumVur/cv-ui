@@ -1,8 +1,7 @@
 import React, {FC} from "react";
-import {Header} from "@common/organisms";
 import {useTheme} from "styled-components";
 import {Theme} from "@themes";
-import {HeaderStyle} from "@common/organisms/Header";
+import {Header, HeaderStyle} from "@organisms";
 
 export interface MainLayoutStyles {
     headerStyle: HeaderStyle;

@@ -1,10 +1,9 @@
 import {FC} from "react";
-import {FlexDiv} from "@components/common/styles"
 import useSWR from "swr";
 import fetch from "node-fetch";
-import {HoverActionIconStyle} from "@common/styles/HoverActionIcon";
+import {FlexDiv, HoverActionIconStyle} from "@styles";
+import {SkillDivision} from "@molecules";
 import scss from "./styles/styles.module.scss"
-import {SkillDivision} from "@common/molecules";
 
 export interface SkillsStyles {
     skillIconStyle: HoverActionIconStyle;

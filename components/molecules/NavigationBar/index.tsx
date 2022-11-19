@@ -1,8 +1,7 @@
 import useSWR from "swr";
 import fetch from "node-fetch";
-import {FlexDiv} from "@common/styles";
+import {FlexDiv, NavigationItem} from "@styles";
 import {NavigationLink} from "@data/navigation-link";
-import NavigationItem from "@common/styles/NavigationItem";
 import scss from "./styles/styles.module.scss"
 
 

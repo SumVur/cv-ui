@@ -1,8 +1,7 @@
 import {FC} from "react";
-import {NavigationBar, ProfileMainInfo, SocialLinks} from "@common/molecules";
-import {FlexDiv} from "@components/common/styles";
+import {FlexDiv, HoverActionIconStyle} from "@styles";
 import style from "./styles/styles.module.scss"
-import {HoverActionIconStyle} from "@common/styles/HoverActionIcon";
+import {NavigationBar, ProfileMainInfo, SocialLinks} from "@molecules";
 
 export interface HeaderStyle {
     socialIconStyle: HoverActionIconStyle

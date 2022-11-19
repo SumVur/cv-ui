@@ -1,8 +1,8 @@
 import useSWR from "swr";
 import fetch from "node-fetch";
-import PagePreview from "@common/molecules/PagePreview";
+import {FlexDiv} from "@styles";
+import {PagePreview} from "@molecules";
 import {PagePreview as PagePreviewInterface} from "@data/page-preview"
-import {FlexDiv} from "@common/styles";
 import scss from "./styles/styles.module.scss"
 
 const PagesPreview = () => {

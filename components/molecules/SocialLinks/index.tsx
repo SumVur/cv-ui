@@ -1,11 +1,10 @@
 import {FC} from "react";
-import {SocialIconInterface} from "@data/social-links";
-import {SocialIcon} from "@common/atoms";
-import {FlexDiv} from "@common/styles"
 import useSWR from "swr";
 import fetch from "node-fetch";
+import {SocialIcon} from "@atoms";
+import {FlexDiv, HoverActionIconStyle} from "@styles"
+import {SocialIconInterface} from "@data/social-links";
 import style from "./styles/styles.module.scss"
-import {HoverActionIconStyle} from "@common/styles/HoverActionIcon";
 
 interface SocialLinksProps {
     paraphrase: string;

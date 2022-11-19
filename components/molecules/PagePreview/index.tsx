@@ -1,15 +1,13 @@
 import {FC, useState} from "react";
-import {PagePreview as PagePreviewInterface} from "@data/page-preview"
-import scss from "./styles/styles.module.scss"
-import {Blur} from "./styles"
-import {FlexDiv} from "@components/common/styles";
 import Image from "next/image";
 import {useRouter} from "next/router";
+import {PagePreview as PagePreviewInterface} from "@data/page-preview"
+import {FlexDiv} from "@styles";
+import scss from "./styles/styles.module.scss"
+import {Blur} from "./styles"
 
-export interface PagePreviewStyles {
-}
 
-type PagePreviewProps = PagePreviewInterface & PagePreviewStyles;
+type PagePreviewProps = PagePreviewInterface;
 
 const PagePreview: FC<PagePreviewProps> = ({title, url, backgroundImage}) => {
     const [isHover, setIsHover] = useState(false);

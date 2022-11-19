@@ -5,8 +5,17 @@
       "@components/*": [
         "components/*"
       ],
-      "@common/*": [
-        "components/common/*"
+      "@atoms": [
+        "components/atoms"
+      ],
+      "@molecules": [
+        "components/molecules"
+      ],
+      "@organisms": [
+        "components/organisms"
+      ],
+      "@styles": [
+        "components/styles"
       ],
       "@layout": [
         "components/layout"

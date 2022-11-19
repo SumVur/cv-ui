@@ -1,5 +1,5 @@
-import {ProfileImage} from "@common/atoms";
-import {FlexDiv} from "@common/styles"
+import {ProfileImage} from "@atoms";
+import {FlexDiv} from "@styles"
 import style from "./styles/styles.module.scss";
 
 const ProfileMainInfo = () => {

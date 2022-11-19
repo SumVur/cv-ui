@@ -1,5 +1,5 @@
 import {FC} from "react";
-import {PagesPreview} from "@common/organisms";
+import {PagesPreview} from "@organisms";
 
 const Home: FC = () => {
     return (
