@@ -6,7 +6,7 @@ import {MainLayout} from "@layout";
 import {Cardo} from '@next/font/google'
 import './styles.scss'
 
-const cardo = Cardo({weight: "400"})
+const cardo = Cardo({weight: "400", subsets: ["latin"]})
 
 function MyApp({Component, pageProps}: AppProps) {
     return (

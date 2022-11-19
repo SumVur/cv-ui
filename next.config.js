@@ -13,6 +13,11 @@ const nextConfig = {
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],
     },
+    experimental: {
+        fontLoaders: [
+            {loader: '@next/font/google', subsets: ['latin']},
+        ],
+    }
 }
 
 module.exports = nextConfig
