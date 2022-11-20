@@ -15,7 +15,7 @@ type SkillDivisionProps = SkillDivisionStyles & { title: string }
 
 const SkillDivision: FC<SkillDivisionProps> = ({title, skillIconStyle, titleStyle}) => {
     const {data} = useSWR(`/api/skills/${title}`, (apiURL: string) => fetch(apiURL, {timeout: 8000}).then(res => res.json()))
-console.log(titleStyle)
+
     return (
         <FlexDiv className={scss.SkillsWrapper}>
             <H3 {...titleStyle}>{title}</H3>
