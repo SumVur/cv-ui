@@ -1,0 +1,40 @@
+.table {
+  flex-direction: column;
+  border: #4e5b62 solid 1px;
+  border-radius: 8px;
+  align-items: center;
+
+  table {
+    border: none;
+    border-collapse: collapse;
+
+    td, th {
+      padding: 10px;
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+      border-bottom: 1px solid #000;
+      text-align: center;
+    }
+
+    th:first-child {
+      border-left: none;
+    }
+
+    td:first-child {
+      border-left: none;
+    }
+
+    th:last-child {
+      border-right: none;
+    }
+
+    td:last-child {
+      border-right: none;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+
+    }
+  }
+}
