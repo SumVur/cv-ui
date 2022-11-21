@@ -20,6 +20,9 @@
       "@layout": [
         "components/layout"
       ],
+      "@helpers": [
+        "helper"
+      ],
       "@themes": [
         "themes"
       ],
