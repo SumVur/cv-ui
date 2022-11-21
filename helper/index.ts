@@ -18,7 +18,7 @@ export function getToken(): string {
 }
 
 export async function loadToken() {
-    const res = await fetch(`${window.location.origin}/api/getToken`);
+    const res = await fetch(`api/getToken`);
     if (!res.ok) {
         throw new Error('Failed to fetch data');
     }
