@@ -14,6 +14,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<SocialIconInter
         return {
             title: item.title,
             link: item.link,
+            // @ts-ignore
             action: item.action?.title
         }
     })
