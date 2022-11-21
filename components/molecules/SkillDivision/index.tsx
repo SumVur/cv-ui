@@ -1,6 +1,5 @@
 import {FC} from "react";
 import useSWR from "swr";
-import fetch from "node-fetch";
 import {SkillIcon} from "@atoms";
 import {FlexDiv, HoverActionIconStyle, TextInterface, H3} from "@styles"
 import {SkillInterface} from "@data/skill";
@@ -14,7 +13,7 @@ export interface SkillDivisionStyles {
 type SkillDivisionProps = SkillDivisionStyles & { title: string }
 
 const SkillDivision: FC<SkillDivisionProps> = ({title, skillIconStyle, titleStyle}) => {
-    const {data} = useSWR(`/api/skills/${title}`, (apiURL: string) => fetch(apiURL, {timeout: 8000}).then(res => res.json()))
+    const {data} = useSWR(`/api/skills/${title}`)
 
     return (
         <FlexDiv className={scss.SkillsWrapper}>

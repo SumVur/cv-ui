@@ -1,6 +1,5 @@
 import {FC} from "react";
 import useSWR from "swr";
-import fetch from "node-fetch";
 import {SocialIcon} from "@atoms";
 import {FlexDiv, HoverActionIconStyle} from "@styles"
 import {SocialIconInterface} from "@data/social-links";
@@ -12,7 +11,7 @@ interface SocialLinksProps {
 }
 
 const SocialLinks: FC<SocialLinksProps> = ({paraphrase, socialIconStyle}) => {
-    const {data} = useSWR('/api/social-links', (apiURL: string) => fetch(apiURL, {timeout: 8000}).then(res => res.json()))
+    const {data} = useSWR('/api/social-links')
 
     return (
         <FlexDiv width={`${socialIconStyle.width * 2 + (16 * 2)}px`} className={style.socialLinks}>

@@ -1,5 +1,4 @@
 import useSWR from "swr";
-import fetch from "node-fetch";
 import {FlexDiv, NavigationItem} from "@styles";
 import {NavigationLink} from "@data/navigation-link";
 import scss from "./styles/styles.module.scss"
@@ -7,7 +6,7 @@ import scss from "./styles/styles.module.scss"
 
 const NavigationBar = () => {
 
-    const {data} = useSWR('/api/navigations-link', (apiURL: string) => fetch(apiURL, {timeout: 8000}).then(res => res.json()))
+    const {data} = useSWR('/api/navigations-link')
 
     return (
         <FlexDiv className={scss.navigationWrapper}>
