@@ -5,6 +5,7 @@ export {default as PagePreview} from "./PagePreview";
 export {default as ProfileMainInfo} from "./ProfileMainInfo"
 
 export {default as Project} from "./Project"
+export * from "./Project"
 
 export {default as SkillDivision} from "./SkillDivision";
 export * from "./SkillDivision";

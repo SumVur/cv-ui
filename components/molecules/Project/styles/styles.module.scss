@@ -3,4 +3,29 @@
   border-radius: 8px;
   padding: 10px;
   flex-direction: column;
+  height: fit-content;
+  margin: 8px;
+
+  width: fit-content;
+
+  @media (max-width: 800px) {
+    width: 94%;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: large;
+  }
+}
+
+.icon {
+  padding: 4px;
+}
+
+.technologists {
+  padding: 8px;
+  width: 80%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
