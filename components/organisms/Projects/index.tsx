@@ -1,15 +1,20 @@
 import useSWR from "swr";
 import {FlexDiv} from "@styles";
 import {ProjectInterface} from "@data/project";
-import {Project} from "@molecules";
+import {Project, ProjectStyles} from "@molecules";
+import {FC} from "react";
 
-const Projects = () => {
+export interface ProjectsStyles {
+    projectStyle: ProjectStyles
+}
+
+const Projects: FC<ProjectsStyles> = ({projectStyle}) => {
     const {data} = useSWR('/api/projects')
 
     return (
-        <FlexDiv>
+        <FlexDiv style={{justifyContent: "space-around", flexWrap: "wrap"}}>
             {data ? data?.map((item: ProjectInterface, index: string) => (
-                <Project key={index} {...item}/>
+                <Project key={index} {...item} {...projectStyle}/>
             )) : (
                 <div>
                     loading...
