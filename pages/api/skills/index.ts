@@ -1,6 +1,7 @@
 import type {NextApiRequest, NextApiResponse} from "next";
-import {SkillInterface} from "@data/skill";
+import {SkillInterface, skillTable} from "@data/skill";
 import * as icons from "@media/generated/Skills";
+import {supabase} from "@helpers"
 
 function createSkill(title: keyof typeof icons): SkillInterface {
     return {
@@ -32,8 +33,22 @@ export function getSkills(skillsTitles: (keyof typeof icons)[]): SkillInterface[
     return finalSkills;
 }
 
-const handler = (req: NextApiRequest, res: NextApiResponse<SkillInterface[]>) => {
-    res.status(200).json(skills);
+const handler = async (req: NextApiRequest, res: NextApiResponse<SkillInterface[]>) => {
+    const {data, error} = await supabase
+        .from(skillTable)
+        .select("title,link");
+    if (error) {
+        res.status(500);
+        return;
+    }
+    const response: SkillInterface[] = data?.map((item) => {
+        let skill: SkillInterface = {
+            title: item.title,
+            link: item.link
+        }
+        return skill
+    })
+    res.status(200).json(response);
 };
 
 export default handler;
