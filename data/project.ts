@@ -22,6 +22,7 @@ export function calculateTeamQuantity(team: Team[]) {
 }
 
 export interface ProjectInterface {
+    title: string
     position: positions
     technologists: SkillInterface[]
     additionalInfo?: string
