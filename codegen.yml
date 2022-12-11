@@ -1,0 +1,9 @@
+overwrite: true
+schema: ".mesh/schema.graphql"
+documents: "./graphql/queries/*.graphql"
+generates:
+  ./graphql/generated/:
+    preset: "client"
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"

@@ -31,7 +31,10 @@
       ],
       "@media/*": [
         "media/*"
-      ]
+      ],
+      "@graphql/*": [
+        "graphql/*"
+      ],
     },
     "target": "es5",
     "lib": [
