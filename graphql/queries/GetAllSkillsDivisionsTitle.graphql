@@ -1,0 +1,6 @@
+query GetAllSkillsDivisionsTitle{
+    getSkillsDivisions {
+        id
+        title
+    }
+}

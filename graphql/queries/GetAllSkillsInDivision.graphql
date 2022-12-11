@@ -1,0 +1,8 @@
+query GetAllSkillsInDivision($id:Float!){
+    getSkillsDivision(id:$id) {
+        skills {
+            title,
+            link
+        }
+    }
+}
