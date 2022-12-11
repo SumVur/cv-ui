@@ -34,5 +34,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# graphql
 graphql.schema.json
 graphql/generated
+.mesh
+
+# Ide
+.idea
