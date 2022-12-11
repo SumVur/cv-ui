@@ -6,7 +6,7 @@ export async function middleware(req: NextRequest) {
     const token = authorization.split(" ").pop()
     if (req.url.includes("unauthorized") || req.url.includes("getToken")) {
         return NextResponse.next();
-    } else if (process.env.AUTH_TOKEN !== token) {
+    } else if (process.env.NEXT_PUBLIC_AUTH_TOKEN !== token) {
         return NextResponse.redirect(new URL('/api/unauthorized', req.url));
     }
 
